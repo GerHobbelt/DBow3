@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -fR ./_*
+
+cmake -H. -B_cmakeBuilds -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=./_cmakeOutput -DWITH_HUNTER_CUSTOM_CONFIG=ON
+
+cmake --build _cmakeBuilds
